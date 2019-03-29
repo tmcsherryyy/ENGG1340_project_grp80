@@ -1,4 +1,4 @@
-# ENGG1340_project
+# Stage_1
 
 problem statement and problem setting
 program features
