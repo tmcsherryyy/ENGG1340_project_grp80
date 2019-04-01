@@ -1,7 +1,6 @@
 # Stage_1
 
-Project Ideas:
-Table management system
+Project Ideas: Table management system
 
 Good restaurants usually run a system to manage the occupancy, reservation, and billing of their tables. In this idea, we are going to build a small table managemnet system to manage few tables of different sizes in a hot-pot restaurant. The default setting of this restaurant,
 4 tables of 2
