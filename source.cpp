@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include <chrono>
 #include <cmath>
@@ -7,7 +8,7 @@ using namespace std;
 const int tablesize=25, tablenum=25;
 
 struct set{
-    int ava, noc, time;
+    int ava, time, child, adult;
 };
 
 
@@ -15,17 +16,23 @@ struct set{
 //Tables which are available for customers store 0
 //Tables which are occupied store 1
 //others store -1
-void setting(set table[tablesize][tablenum], int price){
+void setting(set table[tablesize][tablenum], int &price_a, int &price_c, int &timeallowance){
     
     //Reset the price per head
-    cout << "Price per head is : ";
-    cin >> price;
+    cout << "Price per head for adult is : ";
+    cin >> price_a;
+    cout << "Price per head for child is : ";
+    cin >> price_c;
+    
+    //time allowance
+    cout << "Time allowance for each table (in mins) : ";
+    cin >> timeallowance;
     
     //Reset the table
     int size,num;
     for (int i=0; i<tablesize; i++){
         for (int j=0; j<tablenum; j++){
-            table[i][j].ava=-1;
+            table[i][j].ava = -1;
         }
     }
     
@@ -47,9 +54,13 @@ void setting(set table[tablesize][tablenum], int price){
 
 void newtable(set table[tablesize][tablenum]){
     
-    int num;
-    cout << "Number of customers : ";
-    cin >> num;
+    int adu, chi, num;
+    cout << "Number of adults : ";
+    cin >> adu;
+    cout << "Number of child : ";
+    cin >> chi;
+    
+    num = adu + chi ;
     if (num>tablesize)
         cout << "No suitable table for " << num << " customers" << endl;
     
@@ -65,7 +76,8 @@ void newtable(set table[tablesize][tablenum]){
                 //return table number that waiter should bring customers to
                 if (table[i][j].ava == 0){
                     cout << "Please bring them to table " << i << j << " " << endl;
-                    table[i][j].noc = num ;
+                    table[i][j].adult = adu ;
+                    table[i][j].child = chi ;
                     table[i][j].ava = 1 ;
                     
                     
@@ -100,7 +112,7 @@ int seperatetableno(int num, int &i, int &j){
 }
 
 
-void release(set table[tablesize][tablenum], int price){
+void release(set table[tablesize][tablenum], int price_a, int price_c){
     
     int num,i,j;
     cout << "Table number : ";
@@ -108,11 +120,18 @@ void release(set table[tablesize][tablenum], int price){
     seperatetableno(num,i,j);
     
     cout << "------------------" << endl << "RECEIPT" << endl;
-    cout << "Number of customers : " << table[i][j].noc << endl;
-    cout << "Net total before service charge: " << price*table[i][j].noc << endl;
-    cout << "Total amount = " << price*table[i][j].noc*1.1 << endl << "------------------" << endl;
+    cout << "Number of adults : " << table[i][j].adult << endl;
+    cout << "Number of child : " << table[i][j].child << endl;
     
-    table[i][j].noc = 0;
+    int total=0;
+    cout << price_c << price_a;
+    total = (price_c * table[i][j].child) + (price_a * table[i][j].adult) ;
+    
+    cout << "Net total before service charge: " << total << endl;
+    cout << "Total amount = " << total*1.1 << endl << "------------------" << endl;
+    
+    table[i][j].child = 0;
+    table[i][j].adult = 0;
     table[i][j].ava = 0;
     table[i][j].time = 0;
 }
@@ -127,7 +146,8 @@ void searchtable(set table[tablesize][tablenum]){
     
     if (table[i][j].ava == 1){
         cout << "This table is occupied" << endl;
-        cout << "Number of customers of this table : " << table[i][j].noc << endl;
+        cout << "Number of adults of this table : " << table[i][j].adult << endl;
+        cout << "Number of child of this table : " << table[i][j].child << endl;
         cout << "Time remaining for this table : " << endl;
     }
     else if (table[i][j].ava == 0)
@@ -140,9 +160,8 @@ void searchtable(set table[tablesize][tablenum]){
 
 int main(){
     set table[tablesize][tablenum];
-    int price=180;
-    initialise(table); //DEL
-    // setting(table;price);
+    int price_a, price_c, timeallowance;
+    setting(table, price_a, price_c,timeallowance);
     
     
     int userinput;
@@ -158,7 +177,7 @@ int main(){
                 break;
             
             case 2:
-                release(table,price);
+                release(table, price_a, price_c);
                 break;
                 
             case 3:
@@ -166,7 +185,7 @@ int main(){
                 break;
                 
             case 4:
-                setting(table,price);
+                setting(table,price_a, price_c, timeallowance);
                 break;
 
         }
