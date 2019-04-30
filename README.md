@@ -38,7 +38,10 @@ The system will print a receipt showing the number of adult and child customers,
 Then, the system will set the table information to default value and get ready for next table of cutomers.
 
 3) Search information of a particular table
-The system will ask for table number to be search
+The system will ask for table number to be search. Table information includind,
+- Number of adult and child customers
+- Time remaining for that table
+will be shown.
 
 4) Reset the setting of the restaurant 
 Reset the information including,
@@ -47,9 +50,9 @@ Reset the information including,
 - Time allowance for each table in minutes 
 IMPORTANT: all the table information will also be reset to default value. 
 
-
 9) Quit system
 To close down the system and have to restart again from Part1 next time.
+
 
 
 
