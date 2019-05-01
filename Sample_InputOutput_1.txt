@@ -1,0 +1,144 @@
+
+Price per head for adult is : 180
+Price per head for child is : 150
+Time allowance for each table (in mins) : 120
+Table size of : 2
+Number of table of 2 is : 5
+Table size of (Enter 0 to finish setting) : 4
+Number of table of 4 is : 5
+Table size of (Enter 0 to finish setting) : 6
+Number of table of 6 is : 5
+Table size of (Enter 0 to finish setting) : 8
+Number of table of 8 is : 5  
+Table size of (Enter 0 to finish setting) : 10
+Number of table of 10 is : 2
+Table size of (Enter 0 to finish setting) : 15
+Number of table of 15 is : 2
+Table size of (Enter 0 to finish setting) : 0
+
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 1
+
+Number of adults : 4
+Number of child : 0
+Please bring them to table 400 
+
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 1
+
+Number of adults : 2
+Number of child : 3
+Please bring them to table 600 
+
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 1
+
+Number of adults : 4
+Number of child : 1
+Please bring them to table 601 
+
+
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 1
+
+Number of adults : 7
+Number of child : 3
+Please bring them to table 1000 
+
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 1
+
+Number of adults : 10
+Number of child : 8
+No suitable table for 18 customers
+
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 3
+
+Table number : 00
+Table number doesn't exist!
+
+
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 3
+
+Table number : 200
+This table is available for 2
+
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 3
+
+Table number : 400
+This table is occupied
+Number of adults of this table : 4
+Number of child of this table : 0
+Time remaining for this table : (an integer) minutes
+
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 3
+
+Table number : 600
+This table is occupied
+Number of adults of this table : 2
+Number of child of this table : 3
+Time remaining for this table : (an integer) minutes
+
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 2
+
+Table number : 700
+This table doesn't exist4
+
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 4
+
+Enter 'C' to CONTINUE ; Enter any button to GO BACK 
+Q
+
+//after 140 minutes
+Table 400 only have 15 minutes left
+Table 600 only have 15 minutes left
+Table 601 only have 15 minutes left
+Table 1000 only have 15 minutes left
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 2
+
+Table number : 400
+------------------
+RECEIPT
+Number of adults : 4
+Number of child : 0
+Net total before service charge: 720
+Total amount = 792
+------------------
+
+Table 600 only have 15 minutes left
+Table 601 only have 15 minutes left
+Table 1000 only have 15 minutes left
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 2
+
+Table number : 600
+------------------
+RECEIPT
+Number of adults : 2
+Number of child : 3
+Net total before service charge: 810
+Total amount = 891
+------------------
+
+Table 601 only have 15 minutes left
+Table 1000 only have 15 minutes left
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 1
+
+Number of adults : 3
+Number of child : 3
+Please bring them to table 600
+
+Table 601 only have 15 minutes left
+Table 1000 only have 15 minutes left
+(1:New Table ; 2:Bill & Release Table ; 3:Search Table ; 4:Reset ; 9:Quit Program)
+Operate : 9
+
+System turning off…
