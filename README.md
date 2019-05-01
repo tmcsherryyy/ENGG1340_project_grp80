@@ -28,6 +28,7 @@ This system support functions of
 4: Reset the setting of the restaurant 
 9: Quit system
 To operate any function above, users input the corresponding number of the function. 
+Furthermore, if a table have less than 15minutes left, the system will automatically show there table number before asking for new operation.
 
 1) Add new table for customers
 System will ask for number of customers, find the most suitble table and output the corresponding table number for staff to bring customer to.
